@@ -51,6 +51,7 @@ public class PrisonerLogic : MonoBehaviour
         percentageText.text = (((float)timesSurvived / timesRun) * 100).ToString() + "%";
     }
 
+
     public void createBoxes(int numBoxes) 
     {
         _boxes = new int[numBoxes];
@@ -137,4 +138,16 @@ public class PrisonerLogic : MonoBehaviour
         timesRun++;
         runSimulation = false;
     }
+    public void ResetSimulation()
+    {
+        passedText.text = "Passed: " + 0;
+        failedText.text = "Failed: " + 0;
+        timesRun = 0;
+        passedPrisoners = 0;
+        failedPrisoners = 0;
+        successText.text = "";
+        timesSurvived = 0;
+    }
+
+    
 }
